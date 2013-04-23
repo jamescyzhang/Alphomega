@@ -28,7 +28,7 @@ void emit(string str) {
 	cout << str;
 }
 
-void emitLn(string str) {
+void emitln(string str) {
 	cout << str << endl;
 }
 
@@ -48,7 +48,7 @@ void expected(string toExpect) {
 void match(char a, char b) {
 	if (a == b)
 		getChar(a);
-	else expected(b);
+	else expected(&b);
 }
 
 bool isLetter(char x) {
@@ -73,7 +73,7 @@ char getLetter(char& x) {
 	return ch;
 }
 
-void getNumber(char x) {
+char getNumber(char& x) {
 	char ch;
 	if (!isNumber(x)) {
 		expected("INTEGER");
